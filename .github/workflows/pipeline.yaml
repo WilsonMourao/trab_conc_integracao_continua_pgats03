@@ -13,6 +13,13 @@ on:
       #Roda todos os dias às 22h30
       - cron: "30 22 * * *"
 
+on:
+  # Dispara ao fazer push na branch main
+  push:
+    # Branches que ativam a workflow
+    branches:
+      - main
+
 #tarefas dentro da pipeline = jobs
 
 jobs:
