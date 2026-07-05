@@ -1,0 +1,52 @@
+# nome da pipeline
+name: "Pipeline Completa"
+
+on:
+  workflow_dispatch:
+    schedule:
+      # cronograma de execução
+      # 1 - minuto, 2 - hora, 3 dia do mês, 4 - mês, 5 - dia da semana
+
+      #Roda a cada 30 minutos
+      - cron: "*/30 * * * *"
+
+      #Roda todos os dias às 22h30
+      - cron: "30 22 * * *"
+
+#tarefas dentro da pipeline = jobs
+
+jobs:
+  #nome do job
+  e2e-tests:
+    # maquina onde o job vai rodar
+    runs-on: ubuntu-latest
+
+    # passos do job
+    steps:
+      # clone do projeto
+      - uses: actions/checkout@v4
+
+      # instalação do node
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+
+      # instalação do Yarn
+      - name: Instalando Yarn
+        run: npm install -g yarn
+
+      #   instalação das dependências
+      - name: Instalando dependências
+        run: yarn
+
+      # executar os testes
+      - name: Executando testes
+        run: yarn run test
+
+      # Upload do relatório Mochawesome
+      - name: Upload do relatório Mochawesome
+        if: hashFiles('reports/**') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: mochawesome-report
+          path: reports/

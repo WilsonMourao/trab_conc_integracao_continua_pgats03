@@ -1,0 +1,19 @@
+{
+  "name": "pgats-ci-trab-conc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:format": "prettier --check --ignore-path .gitignore .",
+    "test": "mocha --recursive test --exit --reporter mochawesome --reporter-options reportDir=reports,reportFilename=test-report,html=true,json=true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "mocha": "^11.7.6",
+    "mochawesome": "^1.5.5",
+    "prettier": "^3.9.4"
+  }
+}
