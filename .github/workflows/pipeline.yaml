@@ -11,7 +11,7 @@ on:
       - cron: "*/30 * * * *"
 
       #Roda todos os dias às 22h30
-      - cron: "30 22 * * *"
+      - cron: "00 21 * * *"
 
   # Dispara ao fazer push na branch main
   push:
