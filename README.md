@@ -94,3 +94,14 @@ Para executar a pipeline manualmente:
 * Clique em Run workflow;
 * Escolha a branch desejada;
 * Clique novamente em Run workflow.
+
+## Conceitos Aplicados
+- Integração Contínua (CI);
+- Automação de Processos;
+- Git, GitHub e GitHub Actions;
+- Testes Automatizados;
+- Cobertura de Testes;
+- Qualidade de Código;
+- Pipelines CI/CD;
+- Boas Práticas de Desenvolvimento.
+
