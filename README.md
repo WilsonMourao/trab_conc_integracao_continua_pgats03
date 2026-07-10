@@ -55,19 +55,19 @@ Os cenários de teste garantem a validação das regras de negócio da aplicaç�
 
 A execução dos testes ocorre:
 
-Localmente pelo desenvolvedor;
-Automaticamente pela pipeline do GitHub Actions.
+- Localmente pelo desenvolvedor;
+- Automaticamente pela pipeline do GitHub Actions.
 
 ## Relatório dos Testes
 O projeto utiliza o Mochawesome para geração de relatórios detalhados dos testes executados.
 
 Após a execução:
+``yarn run test
+``
 
-`yarn run test
-`
 Os relatórios são gerados na pasta:
-`/reports
-`
+``/reports
+``
 Os relatórios apresentam:
 
 * Quantidade de testes executados;
@@ -89,8 +89,8 @@ Ela é executada automaticamente através dos seguintes gatilhos:
 ## Execução Manual da Pipeline
 Para executar a pipeline manualmente:
 
-Acesse a aba Actions do GitHub;
-Selecione a workflow da pipeline;
-Clique em Run workflow;
-Escolha a branch desejada;
-Clique novamente em Run workflow.
+* Acesse a aba Actions do GitHub;
+* Selecione a workflow da pipeline;
+* Clique em Run workflow;
+* Escolha a branch desejada;
+* Clique novamente em Run workflow.
